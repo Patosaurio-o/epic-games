@@ -11,11 +11,20 @@
       <link rel="stylesheet" href="/static/css/styles.css">
   </head>
   <body>
-    <button class="colorBtn" id="red">rojo</button>
-    <button class="colorBtn" id="green">verde</button>
-    <button class="colorBtn" id="blue">azul</button>
-    <button class="colorBtn" id="yellow">amarillo</button>
-    <button class="colorBtn" id="purple">purpura</button>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="btn-group position-absolute top-50 start-50 translate-middle" role="group" aria-label="Basic mixed styles example">
+            <button class="colorBtn btn-outline-danger btn" id="red">rojo</button>
+            <button class="colorBtn btn-outline-success btn" id="green">verde</button>
+            <button class="colorBtn btn-outline-primary btn" id="blue">azul</button>
+            <button class="colorBtn btn-outline-warning btn" id="yellow">amarillo</button>
+            <button class="colorBtn alpha btn" id="purple">purpura</button>
+            <button class="colorBtn  btn gradient" id="linear-gradient(to right, red, orange, yellow, green, blue)">gradient</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
   <script type ="text/javascript">
@@ -28,7 +37,7 @@
     const socket = io('http://localhost:8000');
     $(document).ready(function (){
       $('.colorBtn').on('click', function(){
-        let color = $(this).attr('id');
+        let color = $(this).attr('id')
         let nombre = $(this).html()
         console.log(color)
         socket.emit('changeColor', {color: color})
@@ -52,7 +61,7 @@
       });*/ 
     });
     socket.on('color', function(data) {
-      $('body').css('background', data.color);
+      $('body').css('background-image', data.color);
       console.log(data.color)
     });
   </script>

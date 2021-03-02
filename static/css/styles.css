@@ -34,12 +34,12 @@
 	top:1px;
 }
 
-#reset {
+.reset {
 	box-shadow:inset 0px 26px 8px -15px #ff2200;
 	background-color:#e60000;
 	border-radius:1px;
 	border:1px solid #241d13;
-	display:block;
+	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -49,10 +49,10 @@
 	text-decoration:none;
 	text-shadow:-5px 4px 0px #7a2a1d;
 }
-#reset:hover {
+.reset:hover {
 	background-color:#ba2814;
 }
-#reset:active {
+.reset:active {
 	position:relative;
 	top:1px;
 }
@@ -63,4 +63,48 @@
 
 .colorPublicacion {
   background-color: rgb(36,37,38);
+}
+
+.colorFooter {
+  background-color: rgb(75, 76, 77);
+	height: 120px;
+	text-align: center;
+}
+
+.logoGameboton {
+	height: 370px;
+}
+
+.logoGamecolor {
+	height: 300px;
+	margin-top: 30px;
+}
+
+.titulo {
+	color: #ffffff;
+}
+
+.fondoBoton {
+	background-image: url(/static/img/botones.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.alpha { 
+	color: purple;
+	border: purple 1px solid; 
+}
+
+.alpha:hover {
+	background-color: purple;
+	color: white;
+}
+
+.gradient {
+	border: orange 1px solid;
+}
+
+.gradient:hover {
+	background: linear-gradient(to right, red, orange, yellow, green, blue);
+	color: white;
 }
