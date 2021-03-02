@@ -11,7 +11,6 @@
   align-self: auto;
 }
 
-
 #up {
 
 	box-shadow: 0px 0px 8px 0px #000000;
@@ -58,4 +57,10 @@
 	top:1px;
 }
 
-       
+.colorfondo {
+  background-color: rgb(24,25,26);
+}
+
+.colorPublicacion {
+  background-color: rgb(36,37,38);
+}
